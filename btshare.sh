@@ -17,7 +17,7 @@ ctorrent -t -u "http://$(hostname).local:6969/announce" -s $TORRENT_PATH "$1"
 # Copy magnet link to clipboard
 $D_R/bin/magneto.rb $TORRENT_PATH | pbcopy
 
-# Seed torrent (q or ctrl-c to stop)
+# Seed torrent (Q or ctrl-c to stop)
 ctorrent $TORRENT_PATH
 
 # Stop tracker
