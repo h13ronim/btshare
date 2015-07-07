@@ -19,3 +19,5 @@ Run `./bin/instal.sh` to install required dependencies.
 ```
 ./btshare.sh FILE_OR_DIRECTORY_TO_SHARE
 ```
+
+magnet link is copied to clipboard
