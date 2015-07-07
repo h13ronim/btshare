@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# source: https://gist.githubusercontent.com/Burgestrand/1733611/raw/91fe8ceed569fc30cc2d001eb32422606577d148/magneto.rb
 
 require 'rubygems'
 require 'cgi'
@@ -45,5 +46,4 @@ end
 magnet_uri  = "magnet:?xt=#{params.delete(:xt)}"
 magnet_uri << "&" << Rack::Utils.build_query(params)
 
-puts "Magnet URI for #{params[:dn]}:"
-puts "  #{magnet_uri}"
+puts magnet_uri
