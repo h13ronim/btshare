@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# coding: utf-8
 # source: https://gist.githubusercontent.com/Burgestrand/1733611/raw/91fe8ceed569fc30cc2d001eb32422606577d148/magneto.rb
 
 require 'rubygems'
