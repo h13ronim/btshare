@@ -3,16 +3,19 @@
 D_R=`cd \`dirname $0\` ; pwd -P`
 
 # Create unique name for torrent file
-TORRENT_FILE="$(date +"%s")-$(md5 -q -s "$1")"
+TORRENT_FILE="$(date +"%s")-$(md5 -q -s $1)"
 
 # Path to torrent file
 TORRENT_PATH=$D_R/tmp/$TORRENT_FILE.torrent
+
+# Go to directory of shared resource
+cd $(dirname $1)
 
 # Launch tracker
 $D_R/bin/tracker.sh start
 
 # Generate torrent file
-ctorrent -t -u "http://$(hostname).local:6969/announce" -s $TORRENT_PATH "$1"
+ctorrent -t -u "http://$(hostname).local:6969/announce" -s $TORRENT_PATH $(basename $1)
 
 # Copy magnet link to clipboard
 $D_R/bin/magneto.rb $TORRENT_PATH | pbcopy
