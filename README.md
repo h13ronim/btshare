@@ -12,7 +12,7 @@ Requirements:
 * homebrew
 * ruby with bundler
 
-Run `./bin/instal.sh` to install required dependencies.
+Run `./bin/install.sh` to install required dependencies.
 
 ## Usage
 
